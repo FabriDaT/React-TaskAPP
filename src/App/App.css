@@ -1,14 +1,8 @@
-:root{
-  margin: 0 36px;
-  position: relative;
-  min-height: 100vh;
-}
-
-body{
-  margin: 0;
-  padding: 0;
+.App {
+  text-align: center;
   font-family: 'Roboto', sans-serif;
   background: linear-gradient(45deg,red,blue,green,black);
   color: rgb(47 212 213);
-  
+
 }
+
