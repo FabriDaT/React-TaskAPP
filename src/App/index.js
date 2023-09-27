@@ -1,9 +1,18 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AppUI } from "./AppUI";
 
 function useLocalStorage(itemName, initialValue) {
-  //traemos nuestros todos almacenados
+ const [loading , setLoading] = useState(true)
+ const [error , setError] = useState(false)
+ const [item, setItem] = useState(initialValue);
+
+
+  useEffect(() => {
+    setTimeout(() => {
+
+    try {
+             //traemos nuestros todos almacenados
   const localStorageItem = localStorage.getItem(itemName);
   let parsedItem;
 
@@ -15,25 +24,48 @@ function useLocalStorage(itemName, initialValue) {
     // si local storage no esta vacio asignamos a la var 'parsedItem' lo que hay en local storage parseado a json
     parsedItem = JSON.parse(localStorageItem);
   }
+  //se actualiza la informacion con lo que hay guarado en el local storage
+  setItem(parsedItem)
+  setLoading(false)
+    } catch (error) {
+      setError(error)
+    }
+
+    }, 1500);
   
-  const [item, setItem] = useState(parsedItem);
+  })
+  
 
   const saveItem = (newItem) => {
-    const stringifiedItem = JSON.stringify(newItem);
+    try {
+      const stringifiedItem = JSON.stringify(newItem);
     localStorage.setItem(itemName, stringifiedItem);
     setItem(newItem);
+    } catch (error) {
+      setError(error)
+    }
+    
   };
 
-
-  return [
+  return {
+  
     item,
     saveItem,
-  ]
+    loading,
+    error,
+  }
 
 }
 
+
+
 function App() {
-  const [todos, saveTodos] = useLocalStorage('TODOS_V1', [])
+  const {  // renombrar con los elementos usando los 2 puntos.
+    item : todos,
+    saveItem: saveTodos,
+    loading,
+    error,
+  } = useLocalStorage('TODOS_V1', [])
 
   const [searchValue, setSearchValue] = useState("");
 
@@ -69,8 +101,11 @@ function App() {
     saveTodos(newTodos);
   };
 
+
   return (
     <AppUI
+      loading={loading}
+      error={error}
       totalTodos={totalTodos}
       completedTodos={completedTodos}
       searchValue={searchValue}
