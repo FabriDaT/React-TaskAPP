@@ -44,7 +44,7 @@ function AppUI() {
          </TodoList>
         
        {  
-        !!openModal && ( <Modal> <p> teletransportacion </p> </Modal> )
+        !!openModal && ( <Modal> <p> {searchedTodos[0]?.text} </p> </Modal> )
        }
 
       <CreateTodoButton
