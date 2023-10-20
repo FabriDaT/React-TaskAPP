@@ -10,41 +10,41 @@ import { TodoForm } from '../TodoForm';
 
 function AppUI() {
 
-  const  {error,
+  const { error,
     loading,
     searchedTodos,
     completeTodo,
     deleteTodo,
     openModal,
-    setOpenModal} = useContext(TodoContext)
+    setOpenModal } = useContext(TodoContext)
 
   return (
     <>
       <TodoCounter />
       <TodoSearch />
 
-           <TodoList>
+      <TodoList>
 
-           {error && <p> Desesperate algo no esta funcionando!</p>}
-           {loading && <p>No te desesperes, estamos cargando...</p>}
-           {(!loading && !searchedTodos.length ) && <p>Crea tu primer TODO!</p>}
-   
-   
-   
-           {searchedTodos.map(todo => (
-             <TodoItem
-               key={todo.texto}
-               text={todo.texto}
-               completed={todo.completed}
-               onComplete={() => completeTodo(todo.texto)}
-               onDelete={() => deleteTodo(todo.texto)}
-             /> 
-           ))}
-         </TodoList>
-        
-       {  
-        !!openModal && ( <Modal> <TodoForm/> </Modal> )
-       }
+        {error && <p> Desesperate algo no esta funcionando!</p>}
+        {loading && <p>No te desesperes, estamos cargando...</p>}
+        {(!loading && !searchedTodos.length) && <p>Crea tu primer TODO!</p>}
+
+
+
+        {searchedTodos.map(todo => (
+          <TodoItem
+            key={todo.text}
+            text={todo.text}
+            completed={todo.completed}
+            onComplete={() => completeTodo(todo.text)}
+            onDelete={() => deleteTodo(todo.text)}
+          />
+        ))}
+      </TodoList>
+
+      {
+        !!openModal && (<Modal> <TodoForm /> </Modal>)
+      }
 
       <CreateTodoButton
         setOpenModal={setOpenModal}

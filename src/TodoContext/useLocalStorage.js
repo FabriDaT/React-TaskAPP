@@ -11,7 +11,7 @@ function useLocalStorage(itemName, initialValue) {
        setTimeout(() => {
    
        try {
-                //traemos nuestros todos almacenados
+                //traemos nuestros ToDos almacenados
      const localStorageItem = localStorage.getItem(itemName);
      let parsedItem;
    

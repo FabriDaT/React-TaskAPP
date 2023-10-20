@@ -1,7 +1,7 @@
 import React from "react";
 import "./TodoItem.css";
 
-function TodoItem({texto, completed, onComplete, onDelete}) {
+function TodoItem({text, completed, onComplete, onDelete}) {
 
  
   return (
@@ -13,7 +13,7 @@ function TodoItem({texto, completed, onComplete, onDelete}) {
         √
       </span>
       <p className={`TodoItem-p ${completed && "TodoItem-p--complete"}`}>
-        {texto} asdf
+        {text} 
       </p>
       <span className="Icon Icon-delete"
       onClick={onDelete}

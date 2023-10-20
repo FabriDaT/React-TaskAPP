@@ -32,7 +32,7 @@ function TodoProvider (props){
       }
     
       const completeTodo = (text) => {
-        const todoIndex = todos.findIndex((todo) => todo.texto === text);
+        const todoIndex = todos.findIndex((todo) => todo.text === text);
     
         if (todoIndex !== -1) {
           const newTodos = [...todos]; // Clona el array antes de modificarlo

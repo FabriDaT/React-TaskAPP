@@ -15,7 +15,7 @@
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
-    color: black;
+    color: rgb(6, 3, 25);
   }
   .TodoItem-p--complete {
     text-decoration: line-through;
