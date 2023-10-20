@@ -6,6 +6,7 @@ import { TodoItem } from '../TodoItem';
 import { CreateTodoButton } from '../CreateTodoButton';
 import { TodoContext } from '../TodoContext';
 import { Modal } from '../Modal'
+import { TodoForm } from '../TodoForm';
 
 function AppUI() {
 
@@ -22,8 +23,6 @@ function AppUI() {
       <TodoCounter />
       <TodoSearch />
 
-
-
            <TodoList>
 
            {error && <p> Desesperate algo no esta funcionando!</p>}
@@ -39,12 +38,12 @@ function AppUI() {
                completed={todo.completed}
                onComplete={() => completeTodo(todo.texto)}
                onDelete={() => deleteTodo(todo.texto)}
-             />
+             /> 
            ))}
          </TodoList>
         
        {  
-        !!openModal && ( <Modal> <p> {searchedTodos[0]?.text} </p> </Modal> )
+        !!openModal && ( <Modal> <TodoForm/> </Modal> )
        }
 
       <CreateTodoButton

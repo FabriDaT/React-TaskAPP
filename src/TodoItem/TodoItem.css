@@ -6,7 +6,7 @@
     border-radius: 5px;
     align-items: center;
     margin-top: 24px;
-    box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
+    box-shadow: 0px 5px 50px rgba(167, 189, 233, 0.15);
   }
   
   .TodoItem-p {
@@ -15,6 +15,7 @@
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
+    color: black;
   }
   .TodoItem-p--complete {
     text-decoration: line-through;
