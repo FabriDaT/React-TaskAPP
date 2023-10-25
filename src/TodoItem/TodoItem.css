@@ -18,7 +18,7 @@
     color: rgb(6, 3, 25);
   }
   .TodoItem-p--complete {
-    text-decoration: line-through;
+    text-decoration:line-through;
     
   }
   
@@ -39,13 +39,12 @@
     left: 12px;
   }
   .Icon-check--active {
-    color: #35a539;
+    color: #0fad15;
   }
   
   .Icon-delete {
     position: relative;
-    top: -24px;
-    right: 0;
+    
   }
   .Icon-delete:hover {
     color: red;

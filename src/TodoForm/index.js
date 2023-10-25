@@ -28,7 +28,7 @@ const TodoForm = () => {
        <textarea
         value={newTodoValue}
         onChange={onChange}
-        placeholder='Comprar verduras para el almuerzo'
+        placeholder='Comprar verduras para el almuerzo...'
        >
         
        </textarea>
@@ -45,7 +45,7 @@ const TodoForm = () => {
          type='submit'
          className='TodoForm-button TodoForm-Button--Add'
          >
-          Añadir ToDo
+          Añadir Tarea
         </button>
        </div>
     </form>
