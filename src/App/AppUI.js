@@ -8,6 +8,7 @@ import { TodoContext } from '../TodoContext';
 import { Modal } from '../Modal'
 import { TodoForm } from '../TodoForm';
 
+
 function AppUI() {
 
   const { error,
@@ -26,7 +27,7 @@ function AppUI() {
       <TodoList>
 
         {error && <p> Desesperate algo no esta funcionando!</p>}
-        {loading && <p>No te desesperes, estamos cargando...</p>}
+        {loading && <p>Estamos cargando la informacion por favor aguarda...</p> }
         {(!loading && !searchedTodos.length) && <p>Crea tu primer TODO!</p>}
 
 
