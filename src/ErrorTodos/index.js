@@ -1,8 +1,11 @@
 import React from 'react'
+import './ErrorTodos.css'
 
 const ErrorTodos = ({error}) => {
   return (
-    <div>Upss, algo anda mal..</div>
+    <div className='errorDiv'>
+      
+    </div>
   )
 }
 

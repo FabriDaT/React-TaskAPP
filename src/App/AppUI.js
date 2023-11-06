@@ -26,7 +26,7 @@ function AppUI() {
     <>
       <TodoCounter />
       <TodoSearch />
-
+      <ErrorTodos  />
       <TodoList>
 
         {error && <ErrorTodos error={error} />}
