@@ -1,5 +1,5 @@
 import React from 'react'
-import './Empty.css'
+import './EmptyTodos.css'
 
 const EmptyTodos = () => {
   return (
