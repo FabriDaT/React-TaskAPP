@@ -57,7 +57,7 @@ function TodoProvider (props){
         saveTodos(newTodos);
       };
       
-    
+    const [ customCSSfromCreateButton , setCustomCSSfromCreateButton] = useState('')
 
     return (
         <TodoContext.Provider  value={{
@@ -73,6 +73,8 @@ function TodoProvider (props){
             deleteTodo,
             openModal,
             setOpenModal,
+            customCSSfromCreateButton,
+            setCustomCSSfromCreateButton
         }}>
             {props.children}
         </TodoContext.Provider>

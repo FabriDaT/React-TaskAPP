@@ -1,10 +1,19 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import './EmptyTodos.css'
+import { CreateTodoButton } from '../CreateTodoButton'
+import { TodoContext } from "../TodoContext";
 
 
 const EmptyTodos = () => {
+
+  const {setCustomCSSfromCreateButton } = useContext(TodoContext);
+
   return (
-    <div className='vacio'>No hay nada para mostar aun.. crea tu primer todo!</div>
+    <>
+    <CreateTodoButton className={setCustomCSSfromCreateButton('custom')}  />
+    <h2>Crea tu primer To-Do!</h2>
+    </>
+   
   )
 }
 

@@ -24,3 +24,29 @@
   .CreateTodoButton:hover {
     transform: rotate(360deg);
   }
+
+  .CreateTodoButton-custom {
+    background-color: rgb(156, 98, 59);
+    box-shadow: 0px 0px 5px 5px rgba(226, 96, 9, 0.466);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 60px;
+    position: fixed;
+    bottom: 40vh;
+    right: 47vw;
+    font-weight: bold;
+    color: #FAFAFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 84px;
+    width: 84px;
+    
+    transform: rotate(0);
+    transition: .3s ease-in-out;
+  }
+  
+  .CreateTodoButton-custom:hover {
+    transform: rotate(720deg);
+  }

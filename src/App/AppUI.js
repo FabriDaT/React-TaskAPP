@@ -20,18 +20,20 @@ function AppUI() {
     completeTodo,
     deleteTodo,
     openModal,
-    setOpenModal } = useContext(TodoContext)
+    setOpenModal,
+    setCustomCSSfromCreateButton
+   } = useContext(TodoContext)
 
   return (
     <>
       <TodoCounter />
       <TodoSearch />
-      <ErrorTodos  />
+     
       <TodoList>
 
         {error && <ErrorTodos error={error} />}
         {loading && <LoadingTodos /> }
-        {(!loading && !searchedTodos.length) && <EmptyTodos />}
+        {(!loading && !searchedTodos.length) && <EmptyTodos  />}
 
 
 
@@ -51,7 +53,8 @@ function AppUI() {
       }
 
       <CreateTodoButton
-        setOpenModal={setOpenModal}
+        setOpenModal={setOpenModal} setCustomCSSfromCreateButton={
+          searchedTodos.length>0 && setCustomCSSfromCreateButton('')}
       />
     </>
   );
