@@ -11,7 +11,7 @@ const EmptyTodos = () => {
   return (
     <>
     <CreateTodoButton className={setCustomCSSfromCreateButton('custom')}  />
-    <h2>CREA TU PRIMER TO-DO!</h2>
+    <h2>!Crea tu primer TO-DO!</h2>
     </>
    
   )

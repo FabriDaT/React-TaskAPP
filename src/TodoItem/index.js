@@ -1,5 +1,6 @@
 import React from "react";
 import "./TodoItem.css";
+import { LuCheckCircle,LuDelete } from 'react-icons/lu'
 
 function TodoItem({text, completed, onComplete, onDelete}) {
 
@@ -10,7 +11,7 @@ function TodoItem({text, completed, onComplete, onDelete}) {
         className={`Icon Icon-check ${completed && "Icon-check--active"}`}
         onClick={onComplete}
       >
-        √
+        <LuCheckCircle />
       </span>
       <p className={`TodoItem-p ${completed && "TodoItem-p--complete"}`}>
         {text} 
@@ -18,7 +19,8 @@ function TodoItem({text, completed, onComplete, onDelete}) {
       <span className="Icon Icon-delete"
       onClick={onDelete}
       >
-        X</span>
+        <LuDelete />
+        </span>
     </li>
   );
 }
