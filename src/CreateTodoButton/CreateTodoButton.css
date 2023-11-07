@@ -33,7 +33,7 @@
     cursor: pointer;
     font-size: 60px;
     position: fixed;
-    bottom: 40vh;
+    bottom: 30vh;
     right: 47vw;
     font-weight: bold;
     color: #FAFAFA;
@@ -48,5 +48,5 @@
   }
   
   .CreateTodoButton-custom:hover {
-    transform: rotate(720deg);
+    transform: rotate(360deg);
   }
