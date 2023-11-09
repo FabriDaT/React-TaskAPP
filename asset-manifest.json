@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/FabriDaT/React-TaskAPP/static/css/main.1f5d1be1.css",
+    "main.js": "/FabriDaT/React-TaskAPP/static/js/main.18c1c3d9.js",
+    "static/media/error6.jpg": "/FabriDaT/React-TaskAPP/static/media/error6.1bc7c2bfa432500220cd.jpg",
+    "static/media/psychedelic-background.jpg": "/FabriDaT/React-TaskAPP/static/media/psychedelic-background.9ace7c6fa69aaac5386c.jpg",
+    "index.html": "/FabriDaT/React-TaskAPP/index.html",
+    "main.1f5d1be1.css.map": "/FabriDaT/React-TaskAPP/static/css/main.1f5d1be1.css.map",
+    "main.18c1c3d9.js.map": "/FabriDaT/React-TaskAPP/static/js/main.18c1c3d9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1f5d1be1.css",
+    "static/js/main.18c1c3d9.js"
+  ]
+}
