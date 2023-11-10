@@ -87,7 +87,7 @@
   "devDependencies": {
     "gh-pages": "^6.0.0"
   },
-  "homepage": "https://github.com/FabriDaT/React-TaskAPP",
+  "homepage": "https://fabridat.github.io/React-TaskAPP/",
   "jest": {
     "roots": [
       "<rootDir>/src"
