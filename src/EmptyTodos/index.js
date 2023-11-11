@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, {useContext, useEffect} from 'react'
 import './EmptyTodos.css'
 import { CreateTodoButton } from '../CreateTodoButton'
 import { TodoContext } from "../TodoContext";
@@ -8,9 +8,21 @@ const EmptyTodos = () => {
 
   const {setCustomCSSfromCreateButton } = useContext(TodoContext);
 
+  const handleClass = useEffect(() => {
+    // Operaciones que involucran setState
+    // ...
+    setCustomCSSfromCreateButton('custom')
+    // Limpieza (si es necesario)
+    return () => {
+      // Código de limpieza
+      setCustomCSSfromCreateButton('')
+    };
+  }, [/* Dependencias si es necesario */]);
+  
+
   return (
     <>
-    <CreateTodoButton className={setCustomCSSfromCreateButton('custom')}  />
+    <CreateTodoButton className={handleClass}  />
     <h2>!Crea tu primer TO-DO!</h2>
     </>
    

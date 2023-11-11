@@ -53,8 +53,8 @@ function AppUI() {
       }
 
       <CreateTodoButton
-        setOpenModal={setOpenModal} setCustomCSSfromCreateButton={
-          searchedTodos.length>0 && setCustomCSSfromCreateButton('')}
+        setOpenModal={setOpenModal} /*setCustomCSSfromCreateButton={
+          searchedTodos.length>0 && setCustomCSSfromCreateButton('')}*/
       />
     </>
   );

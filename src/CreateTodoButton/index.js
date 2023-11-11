@@ -17,9 +17,11 @@ function CreateTodoButton(props) {
 
 
   return (
+    <div className="containerCreateButton">
     <button className={className} onClick={handleClick}>
        +
     </button>
+    </div>
   );
 }
 
