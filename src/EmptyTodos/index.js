@@ -17,7 +17,7 @@ const EmptyTodos = () => {
       // Código de limpieza
       setCustomCSSfromCreateButton('')
     };
-  }, [/* Dependencias si es necesario */]);
+  }, []);
   
 
   return (
