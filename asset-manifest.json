@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/React-TaskAPP/static/css/main.cb8f5006.css",
+    "main.css": "/React-TaskAPP/static/css/main.ed28b8d8.css",
     "main.js": "/React-TaskAPP/static/js/main.fed8b6f9.js",
     "static/media/error6.jpg": "/React-TaskAPP/static/media/error6.1bc7c2bfa432500220cd.jpg",
     "static/media/psychedelic-background.jpg": "/React-TaskAPP/static/media/psychedelic-background.9ace7c6fa69aaac5386c.jpg",
     "index.html": "/React-TaskAPP/index.html",
-    "main.cb8f5006.css.map": "/React-TaskAPP/static/css/main.cb8f5006.css.map",
+    "main.ed28b8d8.css.map": "/React-TaskAPP/static/css/main.ed28b8d8.css.map",
     "main.fed8b6f9.js.map": "/React-TaskAPP/static/js/main.fed8b6f9.js.map"
   },
   "entrypoints": [
-    "static/css/main.cb8f5006.css",
+    "static/css/main.ed28b8d8.css",
     "static/js/main.fed8b6f9.js"
   ]
 }
