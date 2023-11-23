@@ -1,10 +1,10 @@
-import React, {useContext, useEffect} from 'react'
+import React, { useEffect} from 'react'
 import './EmptyTodos.css'
 import { CreateTodoButton } from '../CreateTodoButton'
 
 
 
-const EmptyTodos = ( {setCustomCSSfromCreateButton} ) => {
+const EmptyTodos = ( {setCustomCSSfromCreateButton , customCSSfromCreateButton} ) => {
 
  
 
@@ -17,13 +17,15 @@ const EmptyTodos = ( {setCustomCSSfromCreateButton} ) => {
       // Código de limpieza
       setCustomCSSfromCreateButton('')
     };
-  }, []);
+  }, [customCSSfromCreateButton]);
   
 
   return (
     <>
-    <CreateTodoButton className={handleClass}  />
-    <h2>!Crea tu primer TO-DO!</h2>
+
+      <h2>!Crea tu primer TO-DO!</h2>
+      <CreateTodoButton  className={handleClass}  />
+
     </>
    
   )

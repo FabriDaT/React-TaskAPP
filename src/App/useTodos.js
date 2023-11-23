@@ -55,8 +55,7 @@ function useTodos() {
     saveTodos(newTodos);
   };
 
-  const [customCSSfromCreateButton, setCustomCSSfromCreateButton] =
-    useState("");
+  const [customCSSfromCreateButton, setCustomCSSfromCreateButton] = useState('');
 
   return {
     loading,
@@ -72,7 +71,7 @@ function useTodos() {
     openModal,
     setOpenModal,
     customCSSfromCreateButton,
-    setCustomCSSfromCreateButton,
+    setCustomCSSfromCreateButton
   };
 }
 

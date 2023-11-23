@@ -41,7 +41,8 @@ function App() {
       <TodoList>
         {error && <ErrorTodos error={error} />}
         {loading && <LoadingTodos />}
-        {!loading && !searchedTodos.length && <EmptyTodos setCustomCSSfromCreateButton={setCustomCSSfromCreateButton} />}
+        {!loading && !searchedTodos.length && <EmptyTodos customCSSfromCreateButton={customCSSfromCreateButton}
+         setCustomCSSfromCreateButton={setCustomCSSfromCreateButton} />}
 
         {searchedTodos.map((todo) => (
           <TodoItem

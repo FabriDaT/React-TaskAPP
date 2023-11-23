@@ -23,7 +23,7 @@ div .containerCreateButton{
   align-items: center;
   height: 72px;
   width: 72px;
-  z-index: 9;
+  
 
   transform: rotate(0);
   transition: 0.3s ease-in-out;
@@ -34,6 +34,7 @@ div .containerCreateButton{
 }
 
 .CreateTodoButton-custom {
+  
   background-color: rgb(156, 98, 59);
   box-shadow: 0px 0px 5px 5px rgba(226, 96, 9, 0.466);
   border: none;

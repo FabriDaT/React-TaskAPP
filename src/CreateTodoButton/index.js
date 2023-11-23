@@ -1,10 +1,9 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./CreateTodoButton.css";
 
 
 function CreateTodoButton({setOpenModal, customCSSfromCreateButton}) {
 
-  
 
   const handleClick = () => {
     setOpenModal(prevState => !prevState)
