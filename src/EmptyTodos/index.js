@@ -1,12 +1,12 @@
 import React, {useContext, useEffect} from 'react'
 import './EmptyTodos.css'
 import { CreateTodoButton } from '../CreateTodoButton'
-import { TodoContext } from "../TodoContext";
 
 
-const EmptyTodos = () => {
 
-  const {setCustomCSSfromCreateButton } = useContext(TodoContext);
+const EmptyTodos = ( {setCustomCSSfromCreateButton} ) => {
+
+ 
 
   const handleClass = useEffect(() => {
     // Operaciones que involucran setState

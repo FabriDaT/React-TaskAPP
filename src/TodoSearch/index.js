@@ -1,10 +1,8 @@
-import { useContext } from "react";
 import "./TodoSearch.css";
-import { TodoContext } from "../TodoContext";
 import { BsSearch } from "react-icons/bs";
 
-function TodoSearch() {
-  const { searchValue, setSearchValue } = useContext(TodoContext);
+function TodoSearch( { searchValue, setSearchValue }) {
+ 
 
   const onSearchValueChange = (event) => {
     console.log(event.target.value);

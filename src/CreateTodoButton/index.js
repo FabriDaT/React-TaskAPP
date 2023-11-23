@@ -1,16 +1,13 @@
 import React, { useContext } from "react";
 import "./CreateTodoButton.css";
-import { TodoContext } from "../TodoContext";
-
-function CreateTodoButton(props) {
 
 
- const { openModal, setOpenModal } = useContext(TodoContext);
-  const { customCSSfromCreateButton , setCustomCSSfromCreateButton } = useContext(TodoContext);
+function CreateTodoButton({setOpenModal, customCSSfromCreateButton}) {
+
   
 
   const handleClick = () => {
-    props.setOpenModal(prevState => !prevState)
+    setOpenModal(prevState => !prevState)
   };
 
   const className = customCSSfromCreateButton ? 'CreateTodoButton-custom' : 'CreateTodoButton';
