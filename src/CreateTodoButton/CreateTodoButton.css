@@ -58,7 +58,7 @@ div .containerCreateButton{
 
 @media (max-width: 400px) {
   .CreateTodoButton-custom {
-    bottom: 25%;
+    bottom: 16%;
   
   }
 }

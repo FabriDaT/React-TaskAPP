@@ -41,8 +41,10 @@ function App() {
       <TodoList>
         {error && <ErrorTodos error={error} />}
         {loading && <LoadingTodos />}
-        {!loading && !searchedTodos.length && <EmptyTodos customCSSfromCreateButton={customCSSfromCreateButton}
-         setCustomCSSfromCreateButton={setCustomCSSfromCreateButton} />}
+        {!loading && !searchedTodos.length && 
+        <EmptyTodos customCSSfromCreateButton={customCSSfromCreateButton}
+         setCustomCSSfromCreateButton={setCustomCSSfromCreateButton} /> 
+         }
 
         {searchedTodos.map((todo) => (
           <TodoItem
@@ -62,8 +64,9 @@ function App() {
       )}
 
       <CreateTodoButton
-        setOpenModal={setOpenModal} customCSSfromCreateButton={customCSSfromCreateButton} /*setCustomCSSfromCreateButton={
-          searchedTodos.length>0 && setCustomCSSfromCreateButton('')}*/
+        setOpenModal={setOpenModal} 
+        customCSSfromCreateButton={customCSSfromCreateButton}
+         /*setCustomCSSfromCreateButton={searchedTodos.length>0 && setCustomCSSfromCreateButton('')}*/
       />
     </>
   );
