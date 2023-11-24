@@ -42,7 +42,9 @@ function App() {
         {error && <ErrorTodos error={error} />}
         {loading && <LoadingTodos />}
         {!loading && !searchedTodos.length && 
-        <EmptyTodos customCSSfromCreateButton={customCSSfromCreateButton}
+        <EmptyTodos
+     
+        customCSSfromCreateButton={customCSSfromCreateButton}
          setCustomCSSfromCreateButton={setCustomCSSfromCreateButton} /> 
          }
 

@@ -2,14 +2,15 @@ import React from "react";
 import "./CreateTodoButton.css";
 
 
-function CreateTodoButton(props) {
+
+const CreateTodoButton = ({setOpenModal, customCSSfromCreateButton}) => {
 
 
   const handleClick = () => {
-    props.setOpenModal(prevState => !prevState)
+    setOpenModal(prevState => !prevState)
   };
 
-  const className = props.customCSSfromCreateButton ? 'CreateTodoButton-custom' : 'CreateTodoButton';
+  const className = customCSSfromCreateButton ? 'CreateTodoButton-custom' : 'CreateTodoButton';
 
 
   return (

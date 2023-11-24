@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import "./TodoForm.css";
 
 const TodoForm = ({ addTodo, setOpenModal }) => {
-  const [newTodoValue, setNewTodoValue] = useState("");
+  const [newTodoValue, setNewTodoValue] = useState("")
+  const [errorMessage, setErrorMessage] = useState("")
 
   const onChange = (event) => {
-    setNewTodoValue(event.target.value);
+    setNewTodoValue(event.target.value)
+    setErrorMessage("")
   };
 
   const onCancel = () => {
@@ -14,8 +16,13 @@ const TodoForm = ({ addTodo, setOpenModal }) => {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    addTodo(newTodoValue);
-    setOpenModal(false);
+    if (newTodoValue.trim() !== "") {
+      addTodo(newTodoValue);
+      setOpenModal(false);
+    } else {
+      setErrorMessage("No puedes guardar un texto vacío")
+    }
+   
   };
 
   return (
@@ -25,7 +32,13 @@ const TodoForm = ({ addTodo, setOpenModal }) => {
         value={newTodoValue}
         onChange={onChange}
         placeholder="Comprar verduras para el almuerzo..."
-      ></textarea>
+      >
+      </textarea>
+
+          
+      {errorMessage && (
+        <small style={{ color: "red" }}>{errorMessage}</small>
+      )}
 
       <div className="TodoForm-ButtonContainer">
         <button
