@@ -2,25 +2,21 @@ import React, { useEffect} from 'react'
 import './EmptyTodos.css'
 import { CreateTodoButton } from '../CreateTodoButton'
 
+function EmptyTodos ( ) {
 
-
-function EmptyTodos ( {setCustomCSSfromCreateButton , customCSSfromCreateButton} ) {
-
+  
  
+  return (
+    <>
+      <h2>!Crea tu primer TO-DO!</h2>
+      {/* <CreateTodoButton    />  */}
+    </>
+   
+  )
+}
 
-  const handleClass = useEffect(() => {
-    // Operaciones que involucran setState
-    // ...
-    setCustomCSSfromCreateButton('CreateTodoButton-custom')
-    // Limpieza (si es necesario)
-    return () => {
-      // Código de limpieza
-      setCustomCSSfromCreateButton('CreateTodoButton')
-    };
-  }, [customCSSfromCreateButton]);
-
-
-  // const customCSS = {
+export {EmptyTodos} 
+// const customCSS = {
 		
   //   backgroundColor: "rgb(156, 98, 59)",
   //   boxShadow:"0px 0px 5px 5px rgba(226, 96, 9, 0.466)",
@@ -42,17 +38,3 @@ function EmptyTodos ( {setCustomCSSfromCreateButton , customCSSfromCreateButton}
   //   transition: "0.3s ease-in-out",
   // }
   
-
-  return (
-    <>
-
-      <h2>!Crea tu primer TO-DO!</h2>
-      <CreateTodoButton  className={handleClass}  /> 
-
-    </>
-   
-  )
-}
-
-
-export {EmptyTodos}

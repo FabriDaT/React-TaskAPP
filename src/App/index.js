@@ -21,14 +21,11 @@ function App() {
     deleteTodo,
     openModal,
     setOpenModal,
-    setCustomCSSfromCreateButton,
-    customCSSfromCreateButton,
     totalTodos,
     completedTodos,
     searchValue,
     setSearchValue,
     addTodo,
-    
   } = useTodos();
 
   return (
@@ -38,14 +35,12 @@ function App() {
         <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
       </TodoHeader>
 
+
       <TodoList>
         {error && <ErrorTodos error={error} />}
-        {loading && <LoadingTodos />}
+        {loading  && !searchedTodos.length && <LoadingTodos />}
         {!loading && !searchedTodos.length && 
-        <EmptyTodos
-     
-        customCSSfromCreateButton={customCSSfromCreateButton}
-         setCustomCSSfromCreateButton={setCustomCSSfromCreateButton} /> 
+        <EmptyTodos  /> 
          }
 
         {searchedTodos.map((todo) => (
@@ -57,7 +52,7 @@ function App() {
             onDelete={() => deleteTodo(todo.text)}
           />
         ))}
-      </TodoList>
+      </TodoList> 
 
       {!!openModal && (
         <Modal>
@@ -65,11 +60,9 @@ function App() {
         </Modal>
       )}
 
-      <CreateTodoButton
-        setOpenModal={setOpenModal} 
-        customCSSfromCreateButton={customCSSfromCreateButton}
-         /*setCustomCSSfromCreateButton={searchedTodos.length>0 && setCustomCSSfromCreateButton('')}*/
-      />
+       <CreateTodoButton
+        setOpenModal={setOpenModal} lengthList={searchedTodos.length}
+      /> 
     </>
   );
 }
