@@ -1,6 +1,14 @@
 h2{
     text-align: center;
-    margin-top: 6rem;
     font-family: 'Roboto';
+    color: white;
+}
+.containerEmpty{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: rgba(41 41 55 / 70%);
 }
 

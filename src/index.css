@@ -1,7 +1,10 @@
 :root{
-  margin: 0 8px;
+  margin: 0 ;
   position: relative;
   min-height: 100vh;
+  padding-left: 9%;
+  padding-right: 9%;
+
 }
 
 body{
