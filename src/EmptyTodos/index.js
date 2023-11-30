@@ -1,6 +1,6 @@
-import React, { useEffect} from 'react'
+import React from 'react'
 import './EmptyTodos.css'
-import { CreateTodoButton } from '../CreateTodoButton'
+
 
 function EmptyTodos ( ) {
 

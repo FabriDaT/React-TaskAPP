@@ -4,6 +4,7 @@ h2{
     color: white;
 }
 .containerEmpty{
+    margin-top: 4%;
     display: flex;
     align-content: center;
     justify-content: center;

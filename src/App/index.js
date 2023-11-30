@@ -35,15 +35,18 @@ function App() {
         <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
       </TodoHeader>
 
+      <TodoList
+        error={error}
+        loading={loading}
+        searchedTodos={searchedTodos}
+        searchText={searchValue}
+        totalTodos={totalTodos}
+        onError={() => ( <ErrorTodos /> )}
+        onLoading={() => ( <LoadingTodos /> )}
+        onEmptyTodos={() => ( <EmptyTodos />  )}
+        onEmptySearchResults={(searchText) => (<p>No hay resultados para {searchText}</p> )}
 
-      <TodoList>
-        {error && <ErrorTodos error={error} />}
-        {loading  && !searchedTodos.length && <LoadingTodos />}
-        {!loading && !searchedTodos.length && 
-        <EmptyTodos  /> 
-         }
-
-        {searchedTodos.map((todo) => (
+        render= { todo => (
           <TodoItem
             key={todo.text}
             text={todo.text}
@@ -51,8 +54,12 @@ function App() {
             onComplete={() => completeTodo(todo.text)}
             onDelete={() => deleteTodo(todo.text)}
           />
-        ))}
-      </TodoList> 
+       ) }
+      
+      
+      />
+
+     
 
       {!!openModal && (
         <Modal>
@@ -60,9 +67,10 @@ function App() {
         </Modal>
       )}
 
-       <CreateTodoButton
-        setOpenModal={setOpenModal} lengthList={searchedTodos.length}
-      /> 
+      <CreateTodoButton
+        setOpenModal={setOpenModal}
+        lengthList={searchedTodos.length}
+      />
     </>
   );
 }
