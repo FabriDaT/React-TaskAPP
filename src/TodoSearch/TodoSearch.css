@@ -16,7 +16,6 @@
   }
 }
 
-
 .TodoSearch {
   position: relative;
   background: #f9fbfc;
@@ -40,5 +39,10 @@
 }
 
 .TodoSearch:focus {
-  outline-color: #ad8326;
+  outline-color: #8f6921bb;
+}
+
+
+.TodoSearch:disabled{
+  opacity: 30%;
 }

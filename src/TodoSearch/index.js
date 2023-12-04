@@ -1,7 +1,7 @@
 import "./TodoSearch.css";
 import { BsSearch } from "react-icons/bs";
 
-function TodoSearch( { searchValue, setSearchValue }) {
+function TodoSearch( { searchValue, setSearchValue, loading }) {
  
 
   const onSearchValueChange = (event) => {
@@ -16,6 +16,7 @@ function TodoSearch( { searchValue, setSearchValue }) {
         placeholder="Escribe para buscar..."
         onChange={onSearchValueChange}
         value={searchValue}
+        disabled={loading}
       />
       <BsSearch className="icon" />
     </div>

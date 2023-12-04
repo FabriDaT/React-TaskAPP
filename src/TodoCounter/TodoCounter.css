@@ -18,3 +18,9 @@
   font-family: "Roboto", sans-serif;
   color: white;
 }
+
+.TodoCounter--loading{
+  opacity: 70%;
+  color: yellowgreen;
+  
+}
