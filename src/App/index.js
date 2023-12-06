@@ -11,6 +11,7 @@ import { ErrorTodos } from "../ErrorTodos";
 import { LoadingTodos } from "../LoadingTodos";
 import { EmptyTodos } from "../EmptyTodos";
 import { TodoHeader } from "../TodoHeader";
+import { ChangeAlert} from "../ChangeAlert"
 
 function App() {
   const {
@@ -68,6 +69,8 @@ function App() {
         setOpenModal={setOpenModal}
         lengthList={searchedTodos.length}
       />
+
+      <ChangeAlert  />
     </>
   );
 }

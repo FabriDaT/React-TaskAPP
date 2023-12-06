@@ -20,7 +20,19 @@
 }
 
 .TodoCounter--loading{
-  opacity: 70%;
-  color: yellowgreen;
   
+  color: rgba(53, 154, 161, 0.507);
+  
+} 
+.containerTodoCounter--loading {
+  width: 100%;
+  margin: 4% 0;
+  border-radius: 7px;
+  background-color: rgb(35, 41, 109);  
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  opacity: 50%;
+ 
 }
