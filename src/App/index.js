@@ -11,7 +11,7 @@ import { ErrorTodos } from "../ErrorTodos";
 import { LoadingTodos } from "../LoadingTodos";
 import { EmptyTodos } from "../EmptyTodos";
 import { TodoHeader } from "../TodoHeader";
-import { ChangeAlert} from "../ChangeAlert"
+import { ChangeAlertWithStorageListener} from "../ChangeAlert"
 
 function App() {
   const {
@@ -27,6 +27,7 @@ function App() {
     searchValue,
     setSearchValue,
     addTodo,
+    sincronizeTodos,
   } = useTodos();
 
   return (
@@ -70,7 +71,7 @@ function App() {
         lengthList={searchedTodos.length}
       />
 
-      <ChangeAlert  />
+      <ChangeAlertWithStorageListener   sincronize={sincronizeTodos} />
     </>
   );
 }

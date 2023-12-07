@@ -6,6 +6,7 @@ function useTodos() {
     // renombrar con los elementos usando los 2 puntos.
     item: todos,
     saveItem: saveTodos,
+    sincronizeItem: sincronizeTodos,
     loading,
     error,
   } = useLocalStorage("TODOS_V1", []);
@@ -68,7 +69,8 @@ function useTodos() {
     completeTodo,
     deleteTodo,
     openModal,
-    setOpenModal
+    setOpenModal,
+    sincronizeTodos
   };
 }
 

@@ -1,9 +1,21 @@
-import React from 'react'
+import React from "react";
+import { withStorageListener } from "./withStorageListener";
 
-const ChangeAlert = () => {
-  return (
-    <div>ChangeAlert</div>
-  )
+function ChangeAlert({ show, toggleShow }) {
+  if (show) {
+    return (
+      <div>
+        <p>Hubo cambios.</p>
+        <button
+          onClick={()=> toggleShow(false)}
+        >Volver a cargar la informacion  </button>
+      </div>
+    );
+  } else {
+    return null;
+  }
 }
 
-export default ChangeAlert
+const ChangeAlertWithStorageListener = withStorageListener(ChangeAlert);
+
+export { ChangeAlertWithStorageListener };

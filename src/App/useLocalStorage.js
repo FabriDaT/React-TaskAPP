@@ -6,6 +6,7 @@ function useLocalStorage(itemName, initialValue) {
     const [loading , setLoading] = useState(true)
     const [error , setError] = useState(false)
     const [item, setItem] = useState(initialValue);
+    const [sincronizedItem, setSincronizedItem] = useState(true);
    
    
      useEffect(() => {
@@ -27,13 +28,14 @@ function useLocalStorage(itemName, initialValue) {
      //se actualiza la informacion con lo que hay guarado en el local storage
      setItem(parsedItem)
      setLoading(false)
+     setSincronizedItem(true)
        } catch (error) {
          setError(error)
        }
    
        }, 2500);
      
-     })
+     }, [sincronizedItem])
      
    
      const saveItem = (newItem) => {
@@ -47,12 +49,18 @@ function useLocalStorage(itemName, initialValue) {
        
      };
    
+     const sincronizeItem = () =>{
+      setLoading(true)
+      setSincronizedItem(false)
+     }
+
      return {
      
        item,
        saveItem,
        loading,
        error,
+       sincronizeItem,
      }
    
    }
