@@ -10,17 +10,18 @@ function withStorageListener(WrappedComponent)  {
 
     useEffect( () => {
         const onChange = (change) => {
-            if (change.key === "TODOS_V1") {
-              console.log("Hubo cambios en TODOS_V1");
-              setStorageChange(true);
+            if (change.key === 'TODOS_V1') {
+              console.log("Hubo cambios en TODOS_V1")
+              setStorageChange(true)
             }
           }
+          window.addEventListener('storage', onChange)
     
-          window.addEventListener("storage", onChange);
-    
-      return () => {
-        window.removeEventListener("storage", onChange)
-    }, [storageChange] })
+       return () => {
+         window.removeEventListener('storage', onChange)
+        
+       } 
+      }, [storageChange]   )
     
   
 

@@ -7,7 +7,11 @@ function ChangeAlert({ show, toggleShow }) {
       <div>
         <p>Hubo cambios.</p>
         <button
-          onClick={()=> toggleShow(false)}
+         onClick={()=>{
+          toggleShow(false)
+          // window.location.reload(true)
+         //window.location.reload(false)
+          }}
         >Volver a cargar la informacion  </button>
       </div>
     );

@@ -71,7 +71,8 @@ function App() {
         lengthList={searchedTodos.length}
       />
 
-      <ChangeAlertWithStorageListener   sincronize={sincronizeTodos} />
+      <ChangeAlertWithStorageListener   sincronize={sincronizeTodos}  />
+      
     </>
   );
 }

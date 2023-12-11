@@ -33,7 +33,7 @@ function useLocalStorage(itemName, initialValue) {
          setError(error)
        }
    
-       }, 2500);
+       }, 2000);
      
      }, [sincronizedItem])
      
