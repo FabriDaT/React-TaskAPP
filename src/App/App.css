@@ -3,3 +3,11 @@ App {
   font-family: 'Roboto', sans-serif;
   
 }
+.container-EmptySearchResults{
+  width: 50%;
+  height: 10%;
+  border: 1px black solid;
+}
+.emptySearch{
+  text-align: center;
+}

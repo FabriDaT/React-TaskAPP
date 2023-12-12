@@ -11,7 +11,7 @@ import { ErrorTodos } from "../ErrorTodos";
 import { LoadingTodos } from "../LoadingTodos";
 import { EmptyTodos } from "../EmptyTodos";
 import { TodoHeader } from "../TodoHeader";
-import { ChangeAlertWithStorageListener} from "../ChangeAlert"
+import { ChangeAlert} from "../ChangeAlert"
 
 function App() {
   const {
@@ -46,7 +46,10 @@ function App() {
         onError={() => ( <ErrorTodos /> )}
         onLoading={() => ( <LoadingTodos /> )}
         onEmptyTodos={() => ( <EmptyTodos />  )}
-        onEmptySearchResults={(searchText) => (<p>No hay resultados para:  {searchText}</p> )}
+        onEmptySearchResults={(searchText) => 
+          (<div className="container-EmptySearchResults">
+            <p className="emptySearch">No hay resultados para:  {searchText}</p></div> )
+        }
 
         render= { todo => (
           <TodoItem
@@ -71,7 +74,7 @@ function App() {
         lengthList={searchedTodos.length}
       />
 
-      <ChangeAlertWithStorageListener   sincronize={sincronizeTodos}  />
+      <ChangeAlert  sincronize={sincronizeTodos}  />
       
     </>
   );
