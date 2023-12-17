@@ -1,11 +1,9 @@
 App {
   text-align: center;
-  font-family: 'Roboto', sans-serif;
-  
 }
 .container-EmptySearchResults{
-  width: 50%;
-  height: 10%;
+  background-color: rgba(201 35 35 / 83%);
+  color: white;
   border: 1px black solid;
 }
 .emptySearch{
